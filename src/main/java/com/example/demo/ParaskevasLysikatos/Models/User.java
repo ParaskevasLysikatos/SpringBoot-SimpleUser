@@ -42,7 +42,7 @@ public class User {
 	 @PrimaryKeyJoinColumn
 	private UserAddress userAd;
 	 
-	 protected User() {};
+	 public User() {};
 		
 		public User( String name, String surname, String gender, Date birthdate) {
 			this.name = name;

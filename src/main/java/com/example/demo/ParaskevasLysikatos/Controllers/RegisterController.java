@@ -73,19 +73,22 @@ public class RegisterController {
 	}
 	
 	@PostMapping(value="/registerUserAjax",consumes = "application/json")
-	public  @ResponseBody ObjectAjax registerAjax(@RequestBody User u,UserAddress a) {
-		ObjectAjax obj=new ObjectAjax();
-		
-		if(!u.getName().isEmpty()) {   
+	public  @ResponseBody ObjectAjax registerAjax(@RequestBody ObjectAjax obj) {
+		User u= new User();
+		UserAddress a= new UserAddress();
+		if(!obj.getName().isEmpty()) {   
 		repo.save(u);
 		a.setUser(u);
 		repoUA.save(a);
-		obj.setName(u.getName());
-		obj.setSurname(u.getSurname());
-		obj.setGender(u.getGender());
-		obj.setBirthdate(u.getBirthdate());
-		obj.setHomeAddress(a.getHomeAddress());
-		obj.setWorkAddress(a.getWorkAddress());
+		u.setName(obj.getName());
+		u.setSurname(u.getSurname());
+		u.setGender(u.getGender());
+		u.setBirthdate(u.getBirthdate());
+	repo.save(u);
+	a.setUser(u);
+	a.setHomeAddress(obj.getHomeAddress());
+	a.setWorkAddress(obj.getWorkAddress());
+	repoUA.save(a);
 		}
 		
 		 

@@ -22,7 +22,7 @@ public class UserAddress {
     @JoinColumn(name = "userAdID")
 	private User user;
 	
-	protected UserAddress() {};
+	public UserAddress() {};
 	
 	public UserAddress( String homeAddress, String workAddress) {
 		this.homeAddress = homeAddress;

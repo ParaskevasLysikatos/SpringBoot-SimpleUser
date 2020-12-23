@@ -154,7 +154,7 @@ input[type=submit]:hover {
   
   </form>
 </div>
-<div class="row" style="margin-left:20%;margin-top:60%; width:50%; display: flex; justify-content: space-around;" >
+<div class="row" style="margin-left:20%;margin-top:50%; width:50%; display: flex; justify-content: space-around;" >
 
 <c:if test = "${Hstatus==1}">
 <div class="alert alert-success" >

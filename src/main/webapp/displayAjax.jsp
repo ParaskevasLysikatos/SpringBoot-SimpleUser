@@ -113,7 +113,7 @@ $(document).ready(function(){
 	            type:"DELETE",
 	            url:"/deleteUserAjax/"+id,
 	            success: function(data){
-	                alert("success"+name);
+	                alert("success  "+name);
 	             $( "#success" ).addClass( "alert alert-success" );
                	 $('#success').html('Deleted with success '+name);
                	$('#'+id).remove();//row delete front end
@@ -123,7 +123,7 @@ $(document).ready(function(){
 	            },
 	            error: function(err) {  
 	                console.log(err);
-	                alert(err+name);
+	                alert(err+" "=name);
 	                $( "#danger" ).addClass( "alert alert-danger" );
                     $('#danger').html('Delete failed');
                     //remove success

@@ -104,7 +104,9 @@ public class DisplayController {
 		editUA.setWorkAddress(a.getWorkAddress());
 		repoUA.save(editUA);
 		 Hstatus=1;
-		 String dateFormated = new SimpleDateFormat("MM/dd/yyyy").format(u.getBirthdate());
+		 String dateFormated="";
+		 if(u.getBirthdate()!=null) {
+		  dateFormated = new SimpleDateFormat("MM/dd/yyyy").format(u.getBirthdate());}
 			//System.out.println(dateFormated);
 			mv.addObject("d", dateFormated);
 		 	mv.addObject("u", u);
