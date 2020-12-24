@@ -123,7 +123,7 @@ $(document).ready(function(){
 	            },
 	            error: function(err) {  
 	                console.log(err);
-	                alert(err+" "=name);
+	                alert(err+" "+name);
 	                $( "#danger" ).addClass( "alert alert-danger" );
                     $('#danger').html('Delete failed');
                     //remove success

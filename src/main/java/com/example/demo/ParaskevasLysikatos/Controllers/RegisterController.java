@@ -77,13 +77,13 @@ public class RegisterController {
 		User u= new User();
 		UserAddress a= new UserAddress();
 		if(!obj.getName().isEmpty()) {   
-		repo.save(u);
-		a.setUser(u);
-		repoUA.save(a);
+		//repo.save(u);
+	//	a.setUser(u);
+		//repoUA.save(a);
 		u.setName(obj.getName());
-		u.setSurname(u.getSurname());
-		u.setGender(u.getGender());
-		u.setBirthdate(u.getBirthdate());
+		u.setSurname(obj.getSurname());
+		u.setGender(obj.getGender());
+		u.setBirthdate(obj.getBirthdate());
 	repo.save(u);
 	a.setUser(u);
 	a.setHomeAddress(obj.getHomeAddress());

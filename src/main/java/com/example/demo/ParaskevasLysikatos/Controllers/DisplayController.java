@@ -91,10 +91,11 @@ public class DisplayController {
 		//u.setBirthdate(new Date());  // set current date on null dates
 		}
 		if(!u.getName().isEmpty()) {   //&& !b.isEmpty() to force date to fill
-			String name=editU.getName();
-			mv.addObject("name",name);
+			
 			
 			editU.setName(u.getName());
+			String name=editU.getName();
+			mv.addObject("name",name);
 			editU.setSurname(u.getSurname());
 			editU.setGender(u.getGender());
 			editU.setBirthdate(u.getBirthdate());
