@@ -15,9 +15,53 @@ justify-content: space-around;
 }
 
 </style>
+<style>
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color:DodgerBlue;
+  border: none;
+  border-bottom: none !important;
+}
+</style>
 </head>
 <body>
-<%@ include file = "/navbar.jsp" %>
+
+
+<nav class="navbar navbar-light navbar-expand-lg" style="background-color:DodgerBlue;">
+  <div class="collapse navbar-collapse">
+  <ul class="navbar-nav d-flex justify-content-around">
+  <li class="nav-item">
+   <a class="navbar-brand" style="color:white;" href="/">Homepage</a>
+   </li>
+   &nbsp; &nbsp; &nbsp; &nbsp;
+     <li class="nav-item">
+   <a class="navbar-brand" style="color:white;" href="homepageAjax">HomepageAjax</a>
+     </li>
+      &nbsp; &nbsp; &nbsp; &nbsp;
+      <li class="nav-item">
+   <a class="navbar-brand" style="color:white;" href="Register">Register</a>
+     </li>
+      &nbsp; &nbsp; &nbsp; &nbsp;
+      <li class="nav-item">
+   <a class="navbar-brand" style="color:white;" href="RegisterAjax">RegisterAjax</a>
+     </li>
+      &nbsp; &nbsp; &nbsp; &nbsp;
+      <li class="nav-item">
+   <a class="navbar-brand" style="color:white;" href="display">Display users</a>
+     </li>
+      &nbsp; &nbsp; &nbsp; &nbsp;
+      <li class="nav-item">
+   <a class="navbar-brand" style="color:white;" href="displayAjax">Display users ajax</a>
+     </li>
+     
+   </ul>
+  </div>
+</nav>
+
+
 <div>
 <h1 style="padding: 2%; margin: 2%; text-align: center;">Display all users Ajax</h1>
 </div>
@@ -127,7 +171,15 @@ $(document).ready(function(){
 
 </script>
 <div style="bottom:0;position:fixed;width:100%;">
-<%@ include file = "/footer.jsp" %>
+
+
+
+<footer class="footer py-3">
+  <div>
+    <span style="color:white;" >Found in github.com/ParaskevasLysikatos/SpringBootSimpleApp</span>
+  </div>
+</footer>
+
 </div>
 </body>
 </html>
