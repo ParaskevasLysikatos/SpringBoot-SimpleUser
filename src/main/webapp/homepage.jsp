@@ -12,7 +12,7 @@
 </head>
 <body>
 	
-<jsp:include page="navbar.jsp" />
+<jsp:include page="/navbar.jsp" flush="true" />
 <h1 style="padding: 5%; margin: 3%; text-align: center;">Welcome to Homepage</h1>
 <div style="padding: 5%; margin: 2%; text-align: center; display: flex;justify-content: center;">
 <h2 style="padding: 5%; margin: 2%; text-align: center;"><a href="/display">Display users</a></h2>
@@ -20,6 +20,6 @@
 </div>
 </body>
 <div style="bottom:0;position:fixed;width:100%;">
-<jsp:include page="footer.jsp" />
+<jsp:include page="/footer.jsp" flush="true"/>
 </div>
 </html>
