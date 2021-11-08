@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>  
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 	
 <!DOCTYPE html>
 <html>
@@ -12,7 +12,7 @@
 </head>
 <body>
 	
-<%@ include file="webapp/navbar.jsp" >
+<%@ include file="/navbar.jsp" %>
 <h1 style="padding: 5%; margin: 3%; text-align: center;">Welcome to Homepage</h1>
 <div style="padding: 5%; margin: 2%; text-align: center; display: flex;justify-content: center;">
 <h2 style="padding: 5%; margin: 2%; text-align: center;"><a href="/display">Display users</a></h2>
@@ -20,6 +20,6 @@
 </div>
 </body>
 <div style="bottom:0;position:fixed;width:100%;">
-<%@ include file="webapp/footer.jsp">
+<%@ include file="/footer.jsp" %>
 </div>
 </html>
