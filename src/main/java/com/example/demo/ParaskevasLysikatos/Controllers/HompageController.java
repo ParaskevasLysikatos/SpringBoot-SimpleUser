@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HompageController {
 	
-	@GetMapping("/homepage")
+	@GetMapping("/")
 	public ModelAndView homepage() {
 		ModelAndView mv= new ModelAndView();
 		mv.setViewName("homepage");
