@@ -25,6 +25,7 @@
   background-color:DodgerBlue;
   border: none;
   border-bottom: none !important;
+  position:fixed;
 }
 </style>
 <style>
