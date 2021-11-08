@@ -48,17 +48,10 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.container {
-  border-radius: 5px;
+.con {
+   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
-  width: 80%;
-  display:flex;
-  justify-content: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding:2%;
   
 }
 
@@ -91,9 +84,9 @@ input[type=submit]:hover {
 </style>
 </head>
 <body>
-
-<h1 style="padding: 5%; margin: 3%; text-align: center;">User info</h1>
-<div class="container">
+<%@ include file = "/navbar.jsp" %>
+<h1 style="padding: 1%; margin: 1%; text-align: center;">User info</h1>
+<div class="container con">
   <form action="/editUser" method="post"  autocomplete="off" enctype="multipart/form-data">
   <div class="row">
     <div class="col-25">
@@ -150,26 +143,28 @@ input[type=submit]:hover {
   </div>
   <div class="row" style="margin-left:50%;margin-top:5%;  display: flex;justify-content: space-between;align-items: center;">
     <input type="submit"  value="Submit">
-    <a class="btn btn-secondary" href="/display">Back</a>
   </div>
   <input  type="hidden" name="id" value="${id}" >
   
   </form>
 </div>
-<div class="row" style="margin-left:20%;margin-top:60%; width:50%;  display: flex; justify-content: space-around;" >
+<div >
 
 <c:if test = "${Hstatus==1}">
-<div  class="alert alert-success" >
+<div  class="alert alert-success" style="margin:1%; padding:1%; display: flex;justify-content:center;" >
   Edit success of user...${name}
 </div>
  </c:if>
  <c:if test = "${Hstatus==0}">
-<div class="alert alert-danger" >
+<div class="alert alert-danger" style="margin:1%; padding:1%; display: flex;justify-content:center;" >
   Failed edit
 </div>
 </c:if>
 </div>
 
+<div style="bottom:0;position:fixed;width:100%;">
+<%@ include file = "/footer.jsp" %>
+</div>
 </body>
 
 </html>

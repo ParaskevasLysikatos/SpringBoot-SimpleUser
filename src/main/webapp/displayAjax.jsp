@@ -13,25 +13,13 @@
 display:flex;
 justify-content: space-around;
 }
-.container {
-  
-  padding: 20px;
-  margin:5%;
-  width: 70%;
-  display:flex;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-}
+
 </style>
 </head>
 <body>
+<%@ include file = "/navbar.jsp" %>
 <div>
-<h1 style="padding: 5%; margin: 2%; text-align: center;">Display all users Ajax</h1>
-<a style=" margin: 2%; display: flex;  width:5%; margin-left: 50%;" class="btn btn-secondary" href="/homepageAjax">Back</a>
+<h1 style="padding: 2%; margin: 2%; text-align: center;">Display all users Ajax</h1>
 </div>
 <div class="container">
 <table class="table table-striped  table-bordered table-hover">
@@ -71,7 +59,7 @@ justify-content: space-around;
 
 </div>
 
-<div  style="margin-left:20%;margin:40%; width:30%;  display: flex; justify-content: space-around;" >
+<div class="container" >
 
 
 <p id="success" >
@@ -138,5 +126,8 @@ $(document).ready(function(){
   
 
 </script>
+<div style="bottom:0;position:fixed;width:100%;">
+<%@ include file = "/footer.jsp" %>
+</div>
 </body>
 </html>

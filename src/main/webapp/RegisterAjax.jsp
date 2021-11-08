@@ -21,6 +21,13 @@
   box-sizing: border-box;
 }
 
+.con {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding:2%;
+  
+}
+
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
@@ -48,19 +55,6 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  width: 80%;
-  display:flex;
-  justify-content: center;
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-}
 
 .col-25 {
   float: left;
@@ -91,9 +85,9 @@ input[type=submit]:hover {
 </style>
 </head>
 <body>
-
-<h1 style="padding: 5%; margin: 3%; text-align: center;">Register a user Ajax</h1>
-<div class="container">
+<%@ include file = "/navbar.jsp" %>
+<h1 style="padding: 2%; margin: 1%; text-align: center;">Register a user Ajax</h1>
+<div class="container con">
   <form  autocomplete="off">
   <div class="row">
     <div class="col-25">
@@ -149,19 +143,18 @@ input[type=submit]:hover {
   </div>
   <div class="row" style="margin-left:50%;margin-top:5%;  display: flex;justify-content: space-between;align-items: center;">
     <input type="submit" id="submit"  value="Submit">
-    <a class="btn btn-secondary" id="home">Back</a>
   </div>
   
   </form>
 </div>
-<div class="row" style="margin-left:20%;margin-top:60%; width:50%; display: flex; justify-content: space-around;" >
+<div>
 
 
-<p  id="success" >
+<p  id="success" style="margin:1%; padding:1%; display: flex;justify-content:center;">
 </p>
 
  
-<p  id="danger" >
+<p  id="danger" style="margin:1%; padding:1%; display: flex;justify-content:center;" >
 </p>
 
 </div>
@@ -251,7 +244,7 @@ $(document).ready(function(){
 
        
 </script>
-
+<%@ include file = "/footer.jsp" %>
 </body>
 
 </html>

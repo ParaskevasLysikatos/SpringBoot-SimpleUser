@@ -48,17 +48,10 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.container {
+.con {
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
-  width: 80%;
-  display:flex;
-  justify-content: center;
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding:2%;
   
 }
 
@@ -91,9 +84,9 @@ input[type=submit]:hover {
 </style>
 </head>
 <body>
-
-<h1 style="padding: 5%; margin: 3%; text-align: center;">Register a user</h1>
-<div class="container">
+<%@ include file = "/navbar.jsp" %>
+<h1 style="padding: 3%; margin: 2%; text-align: center;">Register a user</h1>
+<div class="container con">
   <form action="/registerUser" method="post"  autocomplete="off" enctype="multipart/form-data">
   <div class="row">
     <div class="col-25">
@@ -147,27 +140,26 @@ input[type=submit]:hover {
       <textarea id="WorkAddress" name="workAddress" placeholder="Write WorkAddress.." style="height:100px"></textarea>
     </div>
   </div>
-  <div class="row" style="margin-left:50%;margin-top:5%;  display: flex;justify-content: space-between;align-items: center;">
+  <div class="row" style="margin:2%; padding:2%; display: flex;justify-content:center;">
     <input type="submit"  value="Submit">
-    <a class="btn btn-secondary" href="/homepage">Back</a>
   </div>
   
   </form>
 </div>
-<div class="row" style="margin-left:20%;margin-top:50%; width:50%; display: flex; justify-content: space-around;" >
+<div>
 
 <c:if test = "${Hstatus==1}">
-<div class="alert alert-success" >
+<div class="alert alert-success" style="margin:1%; padding:1%; display: flex;justify-content:center;" >
   Register success of user...${name}
 </div>
  </c:if>
  <c:if test = "${Hstatus==0}">
-<div class="alert alert-danger" >
+<div class="alert alert-danger" style="margin:1%; padding:1%; display: flex;justify-content:center;">
   Failed register
 </div>
 </c:if>
 </div>
-
+<%@ include file = "/footer.jsp" %>
 </body>
 
 </html>

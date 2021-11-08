@@ -49,17 +49,10 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.container {
-  border-radius: 5px;
+.con {
+   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
-  width: 80%;
-  display:flex;
-  justify-content: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding:2%;
   
 }
 
@@ -92,9 +85,9 @@ input[type=submit]:hover {
 </style>
 </head>
 <body>
-
-<h1 style="padding: 5%; margin: 3%; text-align: center;">User info Ajax</h1>
-<div class="container">
+<%@ include file = "/navbar.jsp" %>
+<h1 style="padding: 2%; margin: 2%; text-align: center;">User info Ajax</h1>
+<div class="container con">
   <form action="/editUser" method="post"  autocomplete="off" enctype="multipart/form-data">
   <div class="row">
     <div class="col-25">
@@ -150,13 +143,14 @@ input[type=submit]:hover {
   </div>
   <div class="row" style="margin-left:50%;margin-top:5%;  display: flex;justify-content: space-between;align-items: center;">
     <input type="submit" id="submit"  value="Submit">
-    <a class="btn btn-secondary" href="/displayAjax">Back</a>
   </div>
   <input  type="hidden" id="id" name="id" value="${id}" >
   
   </form>
 </div>
-<div class="row" style="margin-left:20%;margin-top:60%; width:50%;  display: flex; justify-content: space-around;" >
+
+
+<div style="margin:1%; padding:2%; display: flex;justify-content:center;">
 
 
 <p id="success"  >
@@ -164,9 +158,9 @@ input[type=submit]:hover {
 </p>
  
  
-<div id="danger"  >
+<p id="danger"  >
   
-</div>
+</p>
 
 </div>
 <script type="text/javascript">
@@ -267,7 +261,9 @@ $(document).ready(function(){
         });
 
 </script>
-
+<div style="bottom:0;position:fixed;width:100%;">
+<%@ include file = "/footer.jsp" %>
+</div>
 </body>
 
 </html>

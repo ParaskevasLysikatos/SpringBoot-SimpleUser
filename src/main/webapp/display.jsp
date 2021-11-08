@@ -10,26 +10,11 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <meta charset="ISO-8859-1">
 <title>Display users</title>
-<style>
-.container {
-  
-  padding: 20px;
-  margin:5%;
-  width: 70%;
-  display:flex;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-}
-</style>
 </head>
 <body>
+<%@ include file = "/navbar.jsp" %>
 <div>
-<h1 style="padding: 5%; margin: 2%; text-align: center;">Display all users</h1>
-<a style=" margin: 2%; display: flex;  width:5%; margin-left: 50%;" class="btn btn-secondary" href="/homepage">Back</a>
+<h1 style="padding: 2%; margin: 2%; text-align: center;">Display all users</h1>
 </div>
 <div class="container">
 <table class="table table-striped  table-bordered table-hover">
@@ -67,20 +52,22 @@
 
 </div>
 
-<div  style="margin-left:20%;margin:40%; width:30%;  display: flex; justify-content: space-around;" >
 
+<div class="container">
 <c:if test = "${Hstatus==1}">
-<div class="alert alert-success" >
+<p class="alert alert-success"  >
   Delete has been completed of user...${name}
-</div>
+</p>
  </c:if>
  <c:if test = "${Hstatus==0}">
-<div class="alert alert-danger" >
+<p class="alert alert-danger" >
   Failed delete
-</div>
+</p>
 </c:if>
 </div>
 
-
+<div style="bottom:0;position:fixed;width:100%;">
+<%@ include file = "/footer.jsp" %>
+</div>
 </body>
 </html>
