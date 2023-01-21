@@ -11,7 +11,7 @@ public class HompageController {
 	@GetMapping("/")
 	public ModelAndView homepage() {
 		ModelAndView mv= new ModelAndView();
-		mv.setViewName("homepage");
+		mv.setViewName("homepage.jsp");
 		return mv;
 	}
 	
@@ -19,7 +19,7 @@ public class HompageController {
 	@GetMapping("/homepageAjax")
 	public ModelAndView homepageAjax() {
 		ModelAndView mv= new ModelAndView();
-		mv.setViewName("homepageAjax");
+		mv.setViewName("homepageAjax.jsp");
 		return mv;
 	}
 	

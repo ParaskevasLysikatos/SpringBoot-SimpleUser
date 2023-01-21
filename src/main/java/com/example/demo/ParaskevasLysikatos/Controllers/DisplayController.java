@@ -36,7 +36,7 @@ public class DisplayController {
 	@GetMapping("/display")
 	public ModelAndView display() {
 		ModelAndView mv= new ModelAndView();
-		mv.setViewName("display");
+		mv.setViewName("display.jsp");
 		mv.addObject("ListUser",repo.findAll());
 		return mv;
 	}
@@ -44,7 +44,7 @@ public class DisplayController {
 	@RequestMapping("/deleteUser")
 	public ModelAndView delete(@RequestParam("id") int id) {   //RedirectView
 		ModelAndView mv= new ModelAndView();
-		mv.setViewName("display");
+		mv.setViewName("display.jsp");
 		int Hstatus=0;
 		if(repo.existsById(id)) {
 			String name=repo.findById(id).get().getName();
@@ -60,7 +60,7 @@ public class DisplayController {
 	@RequestMapping("/displayUser")
 	public ModelAndView userInfo(@RequestParam("id") int id) {   //RedirectView
 		ModelAndView mv= new ModelAndView();
-		mv.setViewName("UserInfo");
+		mv.setViewName("UserInfo.jsp");
 		mv.addObject("name",'1');
 		User u =repo.findById(id).get();
 		UserAddress a = repoUA.findById(id).get();
@@ -116,7 +116,7 @@ public class DisplayController {
 		}
 		
 		mv.addObject("Hstatus",Hstatus);
-		mv.setViewName("UserInfo");
+		mv.setViewName("UserInfo.jsp");
 		return mv;
 	}
 	
@@ -125,7 +125,7 @@ public class DisplayController {
 	@GetMapping("/displayAjax")
 	public ModelAndView displayAjax() {
 		ModelAndView mv= new ModelAndView();
-		mv.setViewName("displayAjax");
+		mv.setViewName("displayAjax.jsp");
 		mv.addObject("ListUser",repo.findAll());
 		return mv;
 	}
@@ -150,7 +150,7 @@ public class DisplayController {
 	@GetMapping("/displayUserAjax")
 	public ModelAndView userInfoAjax(@RequestParam("id") int id) {   //RedirectView
 		ModelAndView mv= new ModelAndView();
-		mv.setViewName("UserInfoAjax");
+		mv.setViewName("UserInfoAjax.jsp");
 		/*mv.addObject("name",'1');
 		User u =repo.findById(id).get();
 		UserAddress a = repoUA.findById(id).get();

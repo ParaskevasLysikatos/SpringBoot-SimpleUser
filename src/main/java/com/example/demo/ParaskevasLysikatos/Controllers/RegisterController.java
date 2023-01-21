@@ -34,7 +34,7 @@ public class RegisterController {
 	@GetMapping("/Register")
 	public ModelAndView registerPage() {
 		ModelAndView mv= new ModelAndView();
-		mv.setViewName("Register");
+		mv.setViewName("Register.jsp");
 		mv.addObject("name",'1');
 		return mv;
 	}
@@ -60,7 +60,7 @@ public class RegisterController {
 		 Hstatus=1;
 		}
 		mv.addObject("Hstatus",Hstatus);
-		mv.setViewName("Register");
+		mv.setViewName("Register.jsp");
 		return mv;
 	}
 	//------------------------------------------------------------------------------//
@@ -68,7 +68,7 @@ public class RegisterController {
 	@GetMapping("/RegisterAjax")
 	public ModelAndView registerPageAjax() {
 		ModelAndView mv= new ModelAndView();
-		mv.setViewName("RegisterAjax");
+		mv.setViewName("RegisterAjax.jsp");
 		return mv;
 	}
 	
