@@ -1,21 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-<!DOCTYPE html>
-<html>
-<head>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<%@ include file="header.jsp" %>
   <script>
   $( function() {
     $( "#datepicker" ).datepicker();
   } );
   </script>
-  
-<meta charset="ISO-8859-1">
 <title>User info Ajax</title>
 <style>
 .footer {
@@ -97,36 +85,7 @@ input[type=submit]:hover {
 </head>
 <body>
 
-<nav class="navbar navbar-light navbar-expand-lg" style="background-color:DodgerBlue;">
-  <div class="collapse navbar-collapse">
-  <ul class="navbar-nav d-flex justify-content-around">
-  <li class="nav-item">
-   <a class="navbar-brand" style="color:white;" href="/">Homepage</a>
-   </li>
-   &nbsp; &nbsp; &nbsp; &nbsp;
-     <li class="nav-item">
-   <a class="navbar-brand" style="color:white;" href="homepageAjax">HomepageAjax</a>
-     </li>
-      &nbsp; &nbsp; &nbsp; &nbsp;
-      <li class="nav-item">
-   <a class="navbar-brand" style="color:white;" href="Register">Register</a>
-     </li>
-      &nbsp; &nbsp; &nbsp; &nbsp;
-      <li class="nav-item">
-   <a class="navbar-brand" style="color:white;" href="RegisterAjax">RegisterAjax</a>
-     </li>
-      &nbsp; &nbsp; &nbsp; &nbsp;
-      <li class="nav-item">
-   <a class="navbar-brand" style="color:white;" href="display">Display users</a>
-     </li>
-      &nbsp; &nbsp; &nbsp; &nbsp;
-      <li class="nav-item">
-   <a class="navbar-brand" style="color:white;" href="displayAjax">Display users ajax</a>
-     </li>
-     
-   </ul>
-  </div>
-</nav>
+<%@ include file="navbar.jsp" %>
 
 
 <h1 style="padding: 2%; margin: 2%; text-align: center;">User info Ajax</h1>
@@ -306,12 +265,7 @@ $(document).ready(function(){
 </script>
 <div style="bottom:0;position:fixed;width:100%;">
 
-
-<footer class="footer py-3">
-  <div>
-    <span style="color:white;" >Found in github.com/ParaskevasLysikatos/SpringBootSimpleApp</span>
-  </div>
-</footer>
+<%@ include file="footer.jsp" %>
 </div>
 </body>
 
