@@ -42,7 +42,7 @@ public class RegisterController {
 	
 	@PostMapping("/registerUser")
 	@ResponseBody
-	public ModelAndView register( User u, UserAddress a,@RequestParam("birthdate") String b) throws ParseException {
+	public ModelAndView register( User u, UserAddress a,@RequestParam("birthdate") String b) {
 		ModelAndView mv= new ModelAndView();
 		int Hstatus=0;
 		if(b.isEmpty()) {

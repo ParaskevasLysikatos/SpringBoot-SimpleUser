@@ -182,6 +182,7 @@ $(document).ready(function(){
         	event.preventDefault();
        		var name=$('#name').val();
        		var surname=$('#surname').val();
+       		console.log($('#datepicker').val());
        		if($('#datepicker').val()!=''){
        			var birthdate=new Date($('#datepicker').val()).toISOString();
            		 }else birthdate='';
