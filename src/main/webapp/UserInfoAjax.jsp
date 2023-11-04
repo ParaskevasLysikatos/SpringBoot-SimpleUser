@@ -207,7 +207,7 @@ $(document).ready(function(){
        		var name=$('#name').val();
        		var surname=$('#surname').val();
        		if($('#datepicker').val()!=''){
-       			var birthdate=new Date($('#datepicker').val()).toISOString();
+       			var birthdate=$('#datepicker').val();
            		 }else birthdate='';
        		
        		var gender=$('#gender').val();
