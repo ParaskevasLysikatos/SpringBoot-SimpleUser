@@ -6,7 +6,6 @@ spring:
     username: ${PROD_DB_USERNAME}
     password: ${PROD_DB_PASSWORD}
     name: railway
-  
   jpa:
     show-sql: true
   properties:
@@ -15,4 +14,3 @@ spring:
       ddl-auto: update
     file:
       encoding: UTF-8
-
