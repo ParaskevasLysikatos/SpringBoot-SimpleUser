@@ -185,7 +185,7 @@ $(document).ready(function(){
           var birthdate=$('#datepicker').val();
        		console.log(birthdate);
        		if(birthdate!=''){
-       			 birthdate=new Date(birthdate).toISOString();
+       			 birthdate=Date.parse(birthdate).toISOString();
            		 }else birthdate='';
        		
        		var gender=$('#gender').val();
