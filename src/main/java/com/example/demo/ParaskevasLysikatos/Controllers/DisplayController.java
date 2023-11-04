@@ -66,7 +66,7 @@ public class DisplayController {
 		UserAddress a = repoUA.findById(id).get();
 		String dateFormated="";
 		if(u.getBirthdate()!=null)
-		{ dateFormated = new SimpleDateFormat("MM/dd/yyyy").format(u.getBirthdate());}
+		{ dateFormated = new SimpleDateFormat("dd/MM/yyyy").format(u.getBirthdate());}
 		
 		//System.out.println(dateFormated);
 		mv.addObject("d", dateFormated);
@@ -107,7 +107,7 @@ public class DisplayController {
 		 Hstatus=1;
 		 String dateFormated="";
 		 if(u.getBirthdate()!=null) {
-		  dateFormated = new SimpleDateFormat("MM/dd/yyyy").format(u.getBirthdate());}
+		  dateFormated = new SimpleDateFormat("dd/MM/yyyy").format(u.getBirthdate());}
 			//System.out.println(dateFormated);
 			mv.addObject("d", dateFormated);
 		 	mv.addObject("u", u);
@@ -156,7 +156,7 @@ public class DisplayController {
 		UserAddress a = repoUA.findById(id).get();
 		String dateFormated="";
 		if(u.getBirthdate()!=null)
-		{ dateFormated = new SimpleDateFormat("MM/dd/yyyy").format(u.getBirthdate());}
+		{ dateFormated = new SimpleDateFormat("dd/MM/yyyy").format(u.getBirthdate());}
 		//System.out.println(dateFormated);
 		mv.addObject("d", dateFormated);
 		mv.addObject("u", u);
@@ -179,7 +179,7 @@ public class DisplayController {
 		//trick for date
 		String dateFormated="";
 		if(u.getBirthdate()!=null)
-		{ dateFormated = new SimpleDateFormat("MM/dd/yyyy").format(u.getBirthdate());obj.setFormatDate(dateFormated);}
+		{ dateFormated = new SimpleDateFormat("dd/MM/yyyy").format(u.getBirthdate());obj.setFormatDate(dateFormated);}
 		return obj;   
 	}
 	
