@@ -182,9 +182,10 @@ $(document).ready(function(){
         	event.preventDefault();
        		var name=$('#name').val();
        		var surname=$('#surname').val();
-       		console.log($('#datepicker').val());
-       		if($('#datepicker').val()!=''){
-       			var birthdate=new Date($('#datepicker').val()).toISOString();
+          var birthdate=$('#datepicker').val();
+       		console.log(birthdate);
+       		if(birthdate!=''){
+       			 birthdate=new Date(birthdate).toISOString();
            		 }else birthdate='';
        		
        		var gender=$('#gender').val();
