@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -166,7 +167,11 @@ public class DisplayController {
 	}
 	
 	@GetMapping("/GetUserAjax/{id}")
-	public @ResponseBody ObjectAjax GetuserInfoAjax(@PathVariable(value = "id") int id) { 
+	public @ResponseBody ResponseEntity<ObjectAjax> GetuserInfoAjax(@PathVariable(value = "id") int id) { 
+		HttpHeaders responseHeaders = new HttpHeaders();
+		responseHeaders.add("Content-Type", "application/json; charset=utf-8");
+	    responseHeaders.setCacheControl("no-cache, max-age=0"); 
+	    
 		User u=repo.getOne(id);
 		UserAddress a=repoUA.getOne(id);
 		ObjectAjax obj= new ObjectAjax();
@@ -180,7 +185,9 @@ public class DisplayController {
 		String dateFormated="";
 		if(u.getBirthdate()!=null)
 		{ dateFormated = new SimpleDateFormat("dd/MM/yyyy").format(u.getBirthdate());obj.setFormatDate(dateFormated);}
-		return obj;   
+		// return obj;  
+		return new ResponseEntity<ObjectAjax>(obj, responseHeaders, HttpStatus.OK);
+		
 	}
 	
 	@PutMapping(value="/editUserAjax" ,consumes = "application/json")
