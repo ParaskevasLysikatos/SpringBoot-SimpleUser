@@ -10,7 +10,7 @@
   }
 </style>
 
-<footer class="footer py-3">
+<footer class="footer py-1">
   <div>
     <span style="color:white;">Found in github.com/ParaskevasLysikatos/SpringBootSimpleApp</span>
   </div>

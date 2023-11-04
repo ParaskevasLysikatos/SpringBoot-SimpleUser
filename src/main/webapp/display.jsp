@@ -20,7 +20,7 @@
 
 
       <div>
-        <h1 style="padding: 2%; margin: 2%; text-align: center;">Display all users</h1>
+        <h1 style="padding: 1%; margin: 1%; text-align: center;">Display all users</h1>
       </div>
       <div class="container">
         <table class="table table-striped  table-bordered table-hover">

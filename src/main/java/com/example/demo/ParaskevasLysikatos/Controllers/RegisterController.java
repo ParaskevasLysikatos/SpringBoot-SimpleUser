@@ -2,6 +2,7 @@ package com.example.demo.ParaskevasLysikatos.Controllers;
 
 
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -41,13 +42,11 @@ public class RegisterController {
 	
 	@PostMapping("/registerUser")
 	@ResponseBody
-	public ModelAndView register( User u, UserAddress a,@RequestParam("birthdate") String b) {
+	public ModelAndView register( User u, UserAddress a,@RequestParam("birthdate") String b) throws ParseException {
 		ModelAndView mv= new ModelAndView();
 		int Hstatus=0;
 		if(b.isEmpty()) {
-			//b="2020/12/12";
-		//System.out.println(b); check parameter
-		//u.setBirthdate(new Date());  // set current date on null dates
+		u.setBirthdate(new Date());  // set current date on null dates
 		}
 		if(!u.getName().isEmpty()) {   //&& !b.isEmpty() to force date to fill
 			String name=u.getName();

@@ -1,7 +1,9 @@
 <%@ include file="header.jsp" %>
   <script>
   $( function() {
-    $( "#datepicker" ).datepicker();
+	  $("#datepicker").datepicker({
+    	  dateFormat: "dd/mm/yy"
+      });
   } );
   </script>
 <title>Register Ajax</title>
@@ -91,7 +93,7 @@ input[type=submit]:hover {
 <%@ include file="navbar.jsp" %>
 
 
-<h1 style="padding: 2%; margin: 1%; text-align: center;">Register a user Ajax</h1>
+<h1 style="padding: 1%; margin: 0.5%; text-align: center;">Register a user Ajax</h1>
 <div class="container con">
   <form  autocomplete="off">
   <div class="row">
@@ -155,11 +157,11 @@ input[type=submit]:hover {
 <div>
 
 
-<p  id="success" style="margin:1%; padding:1%; display: flex;justify-content:center;">
+<p  id="success" style="margin:0.5%; padding:1%; display: flex;justify-content:center;">
 </p>
 
  
-<p  id="danger" style="margin:1%; padding:1%; display: flex;justify-content:center;" >
+<p  id="danger" style="margin:0.5%; padding:1%; display: flex;justify-content:center;" >
 </p>
 
 </div>

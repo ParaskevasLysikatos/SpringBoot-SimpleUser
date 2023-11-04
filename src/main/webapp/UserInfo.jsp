@@ -1,7 +1,9 @@
 <%@ include file="header.jsp" %>
   <script>
   $( function() {
-    $( "#datepicker" ).datepicker();
+	  $("#datepicker").datepicker({
+    	  dateFormat: "dd/mm/yy"
+      });
   } );
   </script>
 <title>User info</title>

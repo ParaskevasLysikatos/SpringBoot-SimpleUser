@@ -1,7 +1,9 @@
 <%@ include file="header.jsp" %>
   <script>
     $(function () {
-      $("#datepicker").datepicker();
+      $("#datepicker").datepicker({
+    	  dateFormat: "dd/mm/yy"
+      });
     });
   </script>
   <title>Register</title>
@@ -96,7 +98,7 @@
     <%@ include file="navbar.jsp" %>
 
 
-      <h1 style="padding: 3%; margin: 2%; text-align: center;">Register a user</h1>
+      <h1 style="padding: 1%; margin: 1%; text-align: center;">Register a user</h1>
       <div class="container con">
         <form action="/registerUser" method="post" autocomplete="off" enctype="multipart/form-data">
           <div class="row">
@@ -162,12 +164,12 @@
       <div>
 
         <c:if test="${Hstatus==1}">
-          <div class="alert alert-success" style="margin:1%; padding:1%; display: flex;justify-content:center;">
+          <div class="alert alert-success" style="margin:0.5%; padding:1%; display: flex;justify-content:center;">
             Register success of user...${name}
           </div>
         </c:if>
         <c:if test="${Hstatus==0}">
-          <div class="alert alert-danger" style="margin:1%; padding:1%; display: flex;justify-content:center;">
+          <div class="alert alert-danger" style="margin:0.5%; padding:1%; display: flex;justify-content:center;">
             Failed register
           </div>
         </c:if>
